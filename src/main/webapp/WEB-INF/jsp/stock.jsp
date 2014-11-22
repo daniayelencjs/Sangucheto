@@ -4,7 +4,8 @@
 	<title>Stock</title>
 	</head>
 	<body>
-		<a href="irACrearPersona">Crear persona</a>
+		<h1>Stock de todos los ingredientes</h1>
+			
 		<table>
 			<tr>
 				<td>Ingrediente</td>
@@ -12,8 +13,8 @@
 			</tr>
 			<c:forEach var="item" items="${stock}">
 				<tr>
-					<td>${item.Ingrediente.nombre}</td>
-					<td>${item.Integer}</td>
+					<td>${item.key.nombre}</td>
+					<td>${item.value}</td>
 				</tr>
 			</c:forEach>
 		</table>		
