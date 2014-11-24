@@ -52,4 +52,17 @@ public class Controlador {
 		
 		return new ModelAndView("agregarStock",miMap);
 	}
+
+	@RequestMapping(value="/formDarDeAltaIngrediente")
+	public ModelAndView formDarDeAltaIngrediente() {
+		ModelMap modelMap = new ModelMap();
+		modelMap.put("ingrediente", new Ingrediente());
+		return new ModelAndView("formDarDeAltaIngrediente",modelMap);
+	}
+	
+	@RequestMapping(value="/darDeAltaIngrediente",method=RequestMethod.POST)
+	public ModelAndView darDeAltaIngrediente(@ModelAttribute("ingrediente") Ingrediente ingrediente) {
+		Stock.getInstance().agregarIngrediente(ingrediente);
+		return new ModelAndView("/darDeAltaIngrediente");
+	}
 }

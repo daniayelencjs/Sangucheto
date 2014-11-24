@@ -1,10 +1,10 @@
-package org.apache.jsp;
+package org.apache.jsp.WEB_002dINF.jsp;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class darDeAltaIngrediente_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -51,11 +51,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
 
       out.write("<html>\r\n");
-      out.write("\t<head>\r\n");
-      out.write("\t\t<title>Inicio</title>\r\n");
-      out.write("\t</head>\r\n");
+      out.write("\t<head></head>\r\n");
       out.write("\t<body>\r\n");
-      out.write("\t\t<h1>Inicio</h1>\r\n");
+      out.write("\t\tSe dio de alta el ingrediente.\r\n");
       out.write("\t</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
