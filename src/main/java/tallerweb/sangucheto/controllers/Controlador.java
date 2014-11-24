@@ -46,7 +46,7 @@ public class Controlador {
 	}
 	
 	@RequestMapping(value="/agregarStock",method=RequestMethod.POST)
-	public ModelAndView agregarStock(@ModelAttribute("nuevoStock") Ingrediente ingrediente) {
+	public ModelAndView agregarStock(@ModelAttribute("agregarStock") Ingrediente ingrediente) {
 		ModelMap miMap = new ModelMap();
 		miMap.put("ingrediente",ingrediente);
 		

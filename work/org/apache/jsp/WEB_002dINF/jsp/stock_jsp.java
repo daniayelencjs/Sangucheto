@@ -12,7 +12,7 @@ public final class stock_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems;
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fobject_005fmodelAttribute_005fmethod_005faction;
 
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
@@ -23,14 +23,14 @@ public final class stock_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fobject_005fmodelAttribute_005fmethod_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
 
   public void _jspDestroy() {
     _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.release();
-    _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction.release();
+    _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fobject_005fmodelAttribute_005fmethod_005faction.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -148,13 +148,15 @@ public final class stock_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:form
-    org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
+    org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fobject_005fmodelAttribute_005fmethod_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
     _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fform_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
     // /WEB-INF/jsp/stock.jsp(20,6) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setAction("agregarStock");
+    // /WEB-INF/jsp/stock.jsp(20,6) null
+    _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "object", (java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${item.key}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     // /WEB-INF/jsp/stock.jsp(20,6) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fform_005f0.setModelAttribute("nuevoStock");
+    _jspx_th_form_005fform_005f0.setModelAttribute("agregarStock");
     // /WEB-INF/jsp/stock.jsp(20,6) null
     _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "role", new String("form"));
     // /WEB-INF/jsp/stock.jsp(20,6) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
@@ -181,7 +183,7 @@ public final class stock_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005fform_005f0.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005fform_005f0.doFinally();
-      _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction.reuse(_jspx_th_form_005fform_005f0);
+      _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fobject_005fmodelAttribute_005fmethod_005faction.reuse(_jspx_th_form_005fform_005f0);
     }
     return false;
   }

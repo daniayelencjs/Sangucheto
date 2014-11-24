@@ -17,7 +17,7 @@
 					<td>${item.key.nombre}</td>
 					<td>${item.value}</td>					
 					<td>
-						<form:form action="agregarStock" modelAttribute="nuevoStock" role="form" method="post">
+						<form:form action="agregarStock" object="${item.key}" modelAttribute="agregarStock" role="form" method="post">
 							<input type="submit" value="Agregar Stock"/>
 						</form:form>
 					</td>
