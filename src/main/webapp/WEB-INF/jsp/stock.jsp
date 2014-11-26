@@ -12,15 +12,10 @@
 				<td>Ingrediente</td>
 				<td>Cantidad</td>
 			</tr>
-			<c:forEach var="item" items="${stock}">
+			<c:forEach var="ingrediente" items="${stock}">
 				<tr>
-					<td>${item.key.nombre}</td>
-					<td>${item.value}</td>					
-					<td>
-						<form:form action="agregarStock" object="${item.key}" modelAttribute="agregarStock" role="form" method="post">
-							<input type="submit" value="Agregar Stock"/>
-						</form:form>
-					</td>
+					<td>${ingrediente.key.nombre}</td>
+					<td>${ingrediente.value}</td>
 				</tr>
 			</c:forEach>
 		</table>
