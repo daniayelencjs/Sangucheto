@@ -7,11 +7,13 @@
 	<body>
 		<form:form action="darDeAltaIngrediente" method="POST" commandName="ingrediente" role="form">
 		
-			Nombre: <form:input path="nombre"/>
+			Nombre: 
+			<form:input path="nombre"/>
 			<br/>
-			Precio: <form:input path="precio"/>
+			Precio: 
+			<form:input path="precio"/>
 			<br/>
-			
+			Tipo Ingrediente:
 			<form:select path="tipo">
             	<form:options items="${tipos}"/>
         	</form:select>
