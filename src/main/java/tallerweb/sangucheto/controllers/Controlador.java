@@ -1,5 +1,7 @@
 package tallerweb.sangucheto.controllers;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -53,7 +55,7 @@ public class Controlador {
 		
 		if(resultado == true) {
 			Integer stock = Stock.getInstance().obtenerStockDisponible(ingrediente);
-			mensaje = "Stock agregado con éxito, "+command.getNombreIngrediente()+" tiene "+stock+" unidades en stock";
+			mensaje = "Stock agregado con Ã©xito, "+command.getNombreIngrediente()+" tiene "+stock+" unidades en stock";
 		}
 		else {
 			mensaje = "Hubo un error al agregar el stock";
@@ -98,7 +100,7 @@ public class Controlador {
 		Boolean resultado = Stock.getInstance().eliminarIngrediente(ingrediente);
 		
 		if(resultado == true) {
-			mensaje = ingrediente.getNombre()+" eliminado con éxito";
+			mensaje = ingrediente.getNombre()+" eliminado con Ã©xito";
 		}
 		else {
 			mensaje = "Hubo un error al eliminar el ingrediente";
@@ -139,13 +141,33 @@ public class Controlador {
 	@RequestMapping(value="/formDarDeAltaIngrediente")
 	public ModelAndView formDarDeAltaIngrediente() {
 		ModelMap modelMap = new ModelMap();
-		modelMap.put("ingrediente", new Ingrediente());
+		
+		ArrayList<String> tipos = new ArrayList<String>();
+		tipos.add(TipoIngrediente.CONDIMENTO.name());
+		tipos.add(TipoIngrediente.INGREDIENTE.name());
+		
+		modelMap.put("tipos",tipos);
+		
+		modelMap.put("ingrediente", new IngredienteModel()); 
+		
 		return new ModelAndView("formDarDeAltaIngrediente",modelMap);
 	}
 	
 	@RequestMapping(value="/darDeAltaIngrediente",method=RequestMethod.POST)
-	public ModelAndView darDeAltaIngrediente(@ModelAttribute("ingrediente") Ingrediente ingrediente) {
-		Stock.getInstance().agregarIngrediente(ingrediente);
+	public ModelAndView darDeAltaIngrediente(@ModelAttribute("ingrediente") IngredienteModel ingrediente) {
+		Ingrediente ingredienteNuevo = new Ingrediente();
+		
+		ingredienteNuevo.setNombre(ingrediente.getNombre());
+		ingredienteNuevo.setPrecio(ingrediente.getPrecio());
+		
+		if(ingrediente.getTipo() == "INGREDIENTE"){
+			ingredienteNuevo.setTipo(TipoIngrediente.INGREDIENTE);
+		} else {
+			ingredienteNuevo.setTipo(TipoIngrediente.CONDIMENTO);
+		}
+			
+		Stock.getInstance().agregarIngrediente(ingredienteNuevo);
+		
 		return new ModelAndView("/darDeAltaIngrediente");
 	}
 }
