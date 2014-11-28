@@ -2,19 +2,18 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 	<head>
-	<title>Agregar Stock</title>
+	<title>Eliminar Ingrediente</title>
 	</head>
 	<body>
-		<h1>Agregar stock</h1>
+		<h1>Eliminar ingrediente</h1>
 		
-		<form:form action="agregarStock" role="form" method="post">
-			<form:select path="nombreIngrediente">
+		<form:form action="eliminarIngrediente" role="form" method="post">
+			<form:select path="nombre">
 				<c:forEach var="ingrediente" items="${listaDeIngredientes}">				
 					<form:option value="${ingrediente.nombre}" > ${ingrediente.nombre} </form:option> 
 				</c:forEach>
 			</form:select>
-			<form:input path="cantidad"/>
-			<input type="submit" value="Agregar Stock"/>
+			<input type="submit" value="Eliminar"/>
 		</form:form>
 		
 	</body>
