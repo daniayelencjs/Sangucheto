@@ -13,6 +13,8 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
 
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005foptions_0026_005fitems_005fnobody;
 
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
@@ -24,6 +26,8 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
   public void _jspInit() {
     _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fform_005foptions_0026_005fitems_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
@@ -31,6 +35,8 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
   public void _jspDestroy() {
     _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction.release();
     _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.release();
+    _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath.release();
+    _005fjspx_005ftagPool_005fform_005foptions_0026_005fitems_005fnobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -58,6 +64,7 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
       _jspx_out = out;
 
       out.write(" \r\n");
+      out.write(" \r\n");
       out.write("<html>\r\n");
       out.write("\t<head>\r\n");
       out.write("\t<title></title>\r\n");
@@ -68,7 +75,7 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
         return;
       out.write("\r\n");
       out.write("\t</body>\r\n");
-      out.write("</html>");
+      out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -90,13 +97,13 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
     _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fform_005f0.setParent(null);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(7,2) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(8,2) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setAction("darDeAltaIngrediente");
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(7,2) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fform_005f0.setMethod("post");
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(7,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(8,2) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fform_005f0.setMethod("POST");
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(8,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setCommandName("ingrediente");
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(7,2) null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(8,2) null
     _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "role", new String("form"));
     int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
     try {
@@ -105,18 +112,21 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
         do {
           out.write("\r\n");
           out.write("\t\t\r\n");
-          out.write("\t\t\tNombre: ");
+          out.write("\t\t\tNombre: \r\n");
+          out.write("\t\t\t");
           if (_jspx_meth_form_005finput_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("\r\n");
           out.write("\t\t\t<br/>\r\n");
-          out.write("\t\t\tPrecio: ");
+          out.write("\t\t\tPrecio: \r\n");
+          out.write("\t\t\t");
           if (_jspx_meth_form_005finput_005f1(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("\r\n");
           out.write("\t\t\t<br/>\r\n");
-          out.write("\t\t\tIngrediente: ");
-          if (_jspx_meth_form_005finput_005f2(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+          out.write("\t\t\tTipo Ingrediente:\r\n");
+          out.write("\t\t\t");
+          if (_jspx_meth_form_005fselect_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("\r\n");
           out.write("\t\t\t<br/>\t\t\t\t\r\n");
@@ -150,7 +160,7 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f0 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(9,11) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(11,3) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f0.setPath("nombre");
     int[] _jspx_push_body_count_form_005finput_005f0 = new int[] { 0 };
     try {
@@ -177,7 +187,7 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f1 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(11,11) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(14,3) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f1.setPath("precio");
     int[] _jspx_push_body_count_form_005finput_005f1 = new int[] { 0 };
     try {
@@ -196,29 +206,69 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     return false;
   }
 
-  private boolean _jspx_meth_form_005finput_005f2(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+  private boolean _jspx_meth_form_005fselect_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
-    //  form:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f2 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
-    _jspx_th_form_005finput_005f2.setPageContext(_jspx_page_context);
-    _jspx_th_form_005finput_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(13,16) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005finput_005f2.setPath("tipo");
-    int[] _jspx_push_body_count_form_005finput_005f2 = new int[] { 0 };
+    //  form:select
+    org.springframework.web.servlet.tags.form.SelectTag _jspx_th_form_005fselect_005f0 = (org.springframework.web.servlet.tags.form.SelectTag) _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath.get(org.springframework.web.servlet.tags.form.SelectTag.class);
+    _jspx_th_form_005fselect_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_form_005fselect_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(17,3) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005fselect_005f0.setPath("tipo");
+    int[] _jspx_push_body_count_form_005fselect_005f0 = new int[] { 0 };
     try {
-      int _jspx_eval_form_005finput_005f2 = _jspx_th_form_005finput_005f2.doStartTag();
-      if (_jspx_th_form_005finput_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      int _jspx_eval_form_005fselect_005f0 = _jspx_th_form_005fselect_005f0.doStartTag();
+      if (_jspx_eval_form_005fselect_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("            \t");
+          if (_jspx_meth_form_005foptions_005f0(_jspx_th_form_005fselect_005f0, _jspx_page_context, _jspx_push_body_count_form_005fselect_005f0))
+            return true;
+          out.write("\r\n");
+          out.write("        \t");
+          int evalDoAfterBody = _jspx_th_form_005fselect_005f0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_form_005fselect_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_form_005finput_005f2[0]-- > 0)
+      while (_jspx_push_body_count_form_005fselect_005f0[0]-- > 0)
         out = _jspx_page_context.popBody();
-      _jspx_th_form_005finput_005f2.doCatch(_jspx_exception);
+      _jspx_th_form_005fselect_005f0.doCatch(_jspx_exception);
     } finally {
-      _jspx_th_form_005finput_005f2.doFinally();
-      _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.reuse(_jspx_th_form_005finput_005f2);
+      _jspx_th_form_005fselect_005f0.doFinally();
+      _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath.reuse(_jspx_th_form_005fselect_005f0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_form_005foptions_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fselect_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fselect_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:options
+    org.springframework.web.servlet.tags.form.OptionsTag _jspx_th_form_005foptions_005f0 = (org.springframework.web.servlet.tags.form.OptionsTag) _005fjspx_005ftagPool_005fform_005foptions_0026_005fitems_005fnobody.get(org.springframework.web.servlet.tags.form.OptionsTag.class);
+    _jspx_th_form_005foptions_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_form_005foptions_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fselect_005f0);
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(18,13) name = items type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005foptions_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tipos}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+    int[] _jspx_push_body_count_form_005foptions_005f0 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_005foptions_005f0 = _jspx_th_form_005foptions_005f0.doStartTag();
+      if (_jspx_th_form_005foptions_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_005foptions_005f0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_005foptions_005f0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_005foptions_005f0.doFinally();
+      _005fjspx_005ftagPool_005fform_005foptions_0026_005fitems_005fnobody.reuse(_jspx_th_form_005foptions_005f0);
     }
     return false;
   }

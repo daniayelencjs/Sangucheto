@@ -19,27 +19,6 @@ public class Controlador {
 	
 	@RequestMapping("/stock")
 	public ModelAndView obtenerStock() {
-		// BORRAR LO COMENTADO
-//		//-------------------------------------
-//		Ingrediente mayonesa = new Ingrediente();
-//    	mayonesa.setNombre("Mayonesa");
-//    	mayonesa.setPrecio(0.50);
-//    	mayonesa.setTipo(TipoIngrediente.CONDIMENTO);
-//    	
-//    	Ingrediente tomate = new Ingrediente();
-//    	tomate.setNombre("Tomate");
-//    	tomate.setPrecio(2.50);
-//    	tomate.setTipo(TipoIngrediente.INGREDIENTE);
-//    	
-//    	Ingrediente jamon = new Ingrediente();
-//    	jamon.setNombre("Jamon");
-//    	jamon.setPrecio(2.00);
-//    	jamon.setTipo(TipoIngrediente.INGREDIENTE);
-//    	
-//    	Stock.getInstance().agregarIngrediente(mayonesa);
-//    	Stock.getInstance().agregarIngrediente(tomate);
-//    	Stock.getInstance().agregarIngrediente(jamon);
-//    	//-------------------------------------
 		ModelAndView stock = new ModelAndView("stock");
 		stock.addObject("stock",Stock.getInstance().obtenerStock());
 		return stock;
@@ -55,7 +34,7 @@ public class Controlador {
 		
 		if(resultado == true) {
 			Integer stock = Stock.getInstance().obtenerStockDisponible(ingrediente);
-			mensaje = "Stock agregado con éxito, "+command.getNombreIngrediente()+" tiene "+stock+" unidades en stock";
+			mensaje = "Stock agregado con exito, "+command.getNombreIngrediente()+" tiene "+stock+" unidades en stock";
 		}
 		else {
 			mensaje = "Hubo un error al agregar el stock";
@@ -66,27 +45,6 @@ public class Controlador {
 	
 	@RequestMapping("/irAAgregarStock")
 	public ModelAndView irAAgregarStock() {
-		// BORRAR LO COMENTADO
-//		//-------------------------------------
-		Ingrediente mayonesa = new Ingrediente();
-    	mayonesa.setNombre("Mayonesa");
-    	mayonesa.setPrecio(0.50);
-    	mayonesa.setTipo(TipoIngrediente.CONDIMENTO);
-    	
-    	Ingrediente tomate = new Ingrediente();
-    	tomate.setNombre("Tomate");
-    	tomate.setPrecio(2.50);
-    	tomate.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Ingrediente jamon = new Ingrediente();
-    	jamon.setNombre("Jamon");
-    	jamon.setPrecio(2.00);
-    	jamon.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Stock.getInstance().agregarIngrediente(mayonesa);
-    	Stock.getInstance().agregarIngrediente(tomate);
-    	Stock.getInstance().agregarIngrediente(jamon);
-//    	//-------------------------------------
 		ModelMap miMap = new ModelMap();
 		miMap.put("command", new AgregarStockCommand());
 		miMap.put("listaDeIngredientes",Stock.getInstance().listarIngredientesDisponibles());
@@ -100,7 +58,7 @@ public class Controlador {
 		Boolean resultado = Stock.getInstance().eliminarIngrediente(ingrediente);
 		
 		if(resultado == true) {
-			mensaje = ingrediente.getNombre()+" eliminado con éxito";
+			mensaje = ingrediente.getNombre()+" eliminado con exito";
 		}
 		else {
 			mensaje = "Hubo un error al eliminar el ingrediente";
@@ -111,27 +69,6 @@ public class Controlador {
 	
 	@RequestMapping("/irAEliminarIngrediente")
 	public ModelAndView irAEliminarIngrediente() {
-		// BORRAR LO COMENTADO
-//		//-------------------------------------
-//		Ingrediente mayonesa = new Ingrediente();
-//    	mayonesa.setNombre("Mayonesa");
-//    	mayonesa.setPrecio(0.50);
-//    	mayonesa.setTipo(TipoIngrediente.CONDIMENTO);
-//    	
-//    	Ingrediente tomate = new Ingrediente();
-//    	tomate.setNombre("Tomate");
-//    	tomate.setPrecio(2.50);
-//    	tomate.setTipo(TipoIngrediente.INGREDIENTE);
-//    	
-//    	Ingrediente jamon = new Ingrediente();
-//    	jamon.setNombre("Jamon");
-//    	jamon.setPrecio(2.00);
-//    	jamon.setTipo(TipoIngrediente.INGREDIENTE);
-//    	
-//    	Stock.getInstance().agregarIngrediente(mayonesa);
-//    	Stock.getInstance().agregarIngrediente(tomate);
-//    	Stock.getInstance().agregarIngrediente(jamon);
-//    	//-------------------------------------
     	ModelMap miMap = new ModelMap();
 		miMap.put("listaDeIngredientes",Stock.getInstance().listarIngredientesDisponibles());
 		miMap.put("command", new Ingrediente());
