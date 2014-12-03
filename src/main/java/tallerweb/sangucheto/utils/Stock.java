@@ -1,10 +1,13 @@
 package tallerweb.sangucheto.utils;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import tallerweb.sangucheto.model.Ingrediente;
+import tallerweb.sangucheto.model.TipoIngrediente;
 
 /**
  * Maneja un stock de ingredientes, el mismo puede ser asociado a una cantidad.<br>
@@ -32,6 +35,30 @@ public class Stock {
 	 */
 	public Set<Ingrediente> listarIngredientesDisponibles(){
 		return stock.keySet();
+	}
+	
+	/**
+	 * Devuelven los ingredientes o los condimentos que tienen en stock mas de 1 unidad
+	 * @return
+	 */
+	public List<Ingrediente> listarIngredientesEnStock() {
+		List<Ingrediente> resultado = new LinkedList<Ingrediente>();
+		for(Ingrediente each : this.stock.keySet()) {
+			if (each.getTipo().equals(TipoIngrediente.INGREDIENTE) && this.stock.get(each) > 0) {
+				resultado.add(each);
+			}
+		}
+		return resultado;
+	}
+	
+	public List<Ingrediente> listarCondimentosEnStock() {
+		List<Ingrediente> resultado = new LinkedList<Ingrediente>();
+		for(Ingrediente each : this.stock.keySet()) {
+			if (each.getTipo().equals(TipoIngrediente.CONDIMENTO) && this.stock.get(each) > 0) {
+				resultado.add(each);
+			}
+		}
+		return resultado;
 	}
 	
 	/**

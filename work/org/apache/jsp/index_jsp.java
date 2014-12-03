@@ -50,13 +50,22 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write("<html>\r\n");
-      out.write("\t<head>\r\n");
-      out.write("\t\t<title>Inicio</title>\r\n");
-      out.write("\t</head>\r\n");
-      out.write("\t<body>\r\n");
-      out.write("\t\t<h1>Inicio</h1>\r\n");
-      out.write("\t</body>\r\n");
+      out.write("<html>\n");
+      out.write("\t<head>\n");
+      out.write("\t\t<title>Inicio</title>\n");
+      out.write("\t</head>\n");
+      out.write("\t<body>\n");
+      out.write("\t\t<div id=\"menu\">\n");
+      out.write("\t\t\t<ul>\n");
+      out.write("\t\t\t\t<li><a href=\"sangucheto\">Sangucheto</a></li>\n");
+      out.write("\t\t\t\t<li><a href=\"formDarDeAltaIngrediente\">Nuevo ingrediente</a></li>\n");
+      out.write("\t\t\t\t<li><a href=\"stock\">Ver Stock</a></li>\n");
+      out.write("\t\t\t\t<li><a href=\"agregarStock\">Agregar Stock</a></li>\n");
+      out.write("\t\t\t\t<li><a href=\"eliminarIngrediente\">Eliminar Ingrediente</a></li>\n");
+      out.write("\t\t\t</ul>\n");
+      out.write("\t\t</div>\n");
+      out.write("\t\t<h1>Inicio</h1>\n");
+      out.write("\t</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

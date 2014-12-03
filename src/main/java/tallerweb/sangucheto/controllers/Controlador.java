@@ -11,17 +11,25 @@ import org.springframework.web.servlet.ModelAndView;
 
 import tallerweb.sangucheto.model.Ingrediente;
 import tallerweb.sangucheto.model.TipoIngrediente;
+import tallerweb.sangucheto.utils.Sanguchetto;
 import tallerweb.sangucheto.utils.Stock;
 
 @Controller
 public class Controlador {
-	
 	
 	@RequestMapping("/stock")
 	public ModelAndView obtenerStock() {
 		ModelAndView stock = new ModelAndView("stock");
 		stock.addObject("stock",Stock.getInstance().obtenerStock());
 		return stock;
+	}
+	
+	@RequestMapping("/irAAgregarStock")
+	public ModelAndView irAAgregarStock() {
+		ModelMap miMap = new ModelMap();
+		miMap.put("command", new AgregarStockCommand());
+		miMap.put("listaDeIngredientes",Stock.getInstance().listarIngredientesDisponibles());
+		return new ModelAndView("agregarStock",miMap);
 	}
 	
 	@RequestMapping("/agregarStock")
@@ -40,15 +48,15 @@ public class Controlador {
 			mensaje = "Hubo un error al agregar el stock";
 		}
 		miMap.put("mensaje",mensaje);
-		return new ModelAndView("/resultadoAgregarStock",miMap);
+		return new ModelAndView("resultadoAgregarStock",miMap);
 	}
 	
-	@RequestMapping("/irAAgregarStock")
-	public ModelAndView irAAgregarStock() {
-		ModelMap miMap = new ModelMap();
-		miMap.put("command", new AgregarStockCommand());
+	@RequestMapping("/irAEliminarIngrediente")
+	public ModelAndView irAEliminarIngrediente() {
+    	ModelMap miMap = new ModelMap();
 		miMap.put("listaDeIngredientes",Stock.getInstance().listarIngredientesDisponibles());
-		return new ModelAndView("agregarStock",miMap);
+		miMap.put("command", new Ingrediente());
+		return new ModelAndView("eliminarIngrediente",miMap);
 	}
 	
 	@RequestMapping("/eliminarIngrediente")
@@ -64,15 +72,7 @@ public class Controlador {
 			mensaje = "Hubo un error al eliminar el ingrediente";
 		}
 		miMap.put("mensaje",mensaje);
-		return new ModelAndView("/resultadoEliminarIngrediente",miMap);
-	}
-	
-	@RequestMapping("/irAEliminarIngrediente")
-	public ModelAndView irAEliminarIngrediente() {
-    	ModelMap miMap = new ModelMap();
-		miMap.put("listaDeIngredientes",Stock.getInstance().listarIngredientesDisponibles());
-		miMap.put("command", new Ingrediente());
-		return new ModelAndView("eliminarIngrediente",miMap);
+		return new ModelAndView("resultadoEliminarIngrediente",miMap);
 	}
 	
 	@RequestMapping(value="/formDarDeAltaIngrediente")
@@ -105,6 +105,38 @@ public class Controlador {
 			
 		Stock.getInstance().agregarIngrediente(ingredienteNuevo);
 		
-		return new ModelAndView("/darDeAltaIngrediente");
+		return new ModelAndView("darDeAltaIngrediente");
+	}
+	
+	@RequestMapping("/sangucheto")
+	public ModelAndView irASangucheto() {
+		ModelMap miMap = new ModelMap();
+		miMap.put("ingredientesSangucheto", Sanguchetto.getInstance().verIngredientes());
+		miMap.put("condimentosSangucheto", Sanguchetto.getInstance().verCondimentos());
+		miMap.put("precio", Sanguchetto.getInstance().getPrecio());
+		miMap.put("ingredientesStock", Stock.getInstance().listarIngredientesEnStock());
+		miMap.put("condimentosStock", Stock.getInstance().listarCondimentosEnStock());	
+		miMap.put("ingredienteAgregar", new Ingrediente());
+		miMap.put("condimentoAgregar", new Ingrediente());
+		
+		return new ModelAndView("sangucheto",miMap);
+	}
+	
+	@RequestMapping(value="/agregarIngredienteASangucheto",method=RequestMethod.POST)
+	public void agregarIngredienteASangucheto(@ModelAttribute("ingredienteAgregar") Ingrediente ingrediente) {
+		agregarASangucheto(ingrediente);
+	}
+	
+	@RequestMapping(value="/agregarCondimentoASangucheto",method=RequestMethod.POST)
+	public void agregarCondimentoASangucheto(@ModelAttribute("condimentoAgregar") Ingrediente ingrediente) {
+		agregarASangucheto(ingrediente);
+	}
+	
+	public ModelAndView agregarASangucheto(Ingrediente ingrediente) {
+		Sanguchetto.getInstance().agregarIngrediente(ingrediente);
+		//Falta ver como hacemos para agregarle el ingrediente completo con su precio y tipo
+		//Pense en hacer un metodo en Stock que recorra la lista de ingredientes buscando el que necesitamos y lo devuelva completo
+		//Hay que ver
+		return null;
 	}
 }
