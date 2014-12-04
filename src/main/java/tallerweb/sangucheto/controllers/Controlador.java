@@ -48,7 +48,7 @@ public class Controlador {
 			mensaje = "Hubo un error al agregar el stock";
 		}
 		miMap.put("mensaje",mensaje);
-		return new ModelAndView("resultadoAgregarStock",miMap);
+		return new ModelAndView("resultado",miMap);
 	}
 	
 	@RequestMapping("/irAEliminarIngrediente")
@@ -72,7 +72,7 @@ public class Controlador {
 			mensaje = "Hubo un error al eliminar el ingrediente";
 		}
 		miMap.put("mensaje",mensaje);
-		return new ModelAndView("resultadoEliminarIngrediente",miMap);
+		return new ModelAndView("resultado",miMap);
 	}
 	
 	@RequestMapping(value="/formDarDeAltaIngrediente")
@@ -93,6 +93,8 @@ public class Controlador {
 	@RequestMapping(value="/darDeAltaIngrediente",method=RequestMethod.POST)
 	public ModelAndView darDeAltaIngrediente(@ModelAttribute("ingrediente") IngredienteModel ingrediente) {
 		Ingrediente ingredienteNuevo = new Ingrediente();
+		String mensaje;
+		ModelMap miMap = new ModelMap();
 		
 		ingredienteNuevo.setNombre(ingrediente.getNombre());
 		ingredienteNuevo.setPrecio(ingrediente.getPrecio());
@@ -103,9 +105,16 @@ public class Controlador {
 			ingredienteNuevo.setTipo(TipoIngrediente.CONDIMENTO);
 		}
 			
-		Stock.getInstance().agregarIngrediente(ingredienteNuevo);
+		Boolean resultado = Stock.getInstance().agregarIngrediente(ingredienteNuevo);		
 		
-		return new ModelAndView("darDeAltaIngrediente");
+		if(resultado == true) {
+			mensaje = "Se dio de alta " + ingrediente.getNombre();
+		}
+		else {
+			mensaje = "Hubo un error al dar de alta el ingrediente";
+		}
+		miMap.put("mensaje",mensaje);
+		return new ModelAndView("resultado",miMap);
 	}
 	
 	@RequestMapping("/sangucheto")

@@ -1,10 +1,15 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 	<title>Agregar Stock</title>
+			<%@include file="/recursos/includes/recursos.html" %>
 	</head>
 	<body>
+
+		<%@include file="/recursos/includes/navbar.html" %>
+
 		<h1>Agregar stock</h1>
 		
 		<form:form action="agregarStock" role="form" method="post">
@@ -17,5 +22,11 @@
 			<input type="submit" value="Agregar Stock"/>
 		</form:form>
 		
+		<script type="text/javascript">
+      $(function() {
+        $("#navbar ul li:contains(Agregar stock)").addClass("active");
+      });
+    </script>
+
 	</body>
 </html>

@@ -3,8 +3,12 @@
 <html>
 	<head>
 	<title>Eliminar Ingrediente</title>
+			<%@include file="/recursos/includes/recursos.html" %>
 	</head>
 	<body>
+
+		<%@include file="/recursos/includes/navbar.html" %>
+
 		<h1>Eliminar ingrediente</h1>
 		
 		<form:form action="eliminarIngrediente" role="form" method="post">
@@ -15,6 +19,12 @@
 			</form:select>
 			<input type="submit" value="Eliminar"/>
 		</form:form>
+
+		<script type="text/javascript">
+      $(function() {
+        $("#navbar ul li:contains(Eliminar ingrediente)").addClass("active");
+      });
+    </script>
 		
 	</body>
 </html>
