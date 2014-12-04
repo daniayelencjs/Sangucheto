@@ -11,6 +11,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody;
+
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
 
@@ -19,11 +21,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
 
   public void _jspDestroy() {
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -50,21 +54,48 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write("<html>\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html lang=\"en\">\n");
       out.write("\t<head>\n");
       out.write("\t\t<title>Inicio</title>\n");
+      out.write("\t\t\t<link href='");
+      if (_jspx_meth_c_005furl_005f0(_jspx_page_context))
+        return;
+      out.write("' rel=\"stylesheet\" type=\"text/css\" />\n");
+      out.write("    \t<link href='");
+      if (_jspx_meth_c_005furl_005f1(_jspx_page_context))
+        return;
+      out.write("' rel=\"stylesheet\" type=\"text/css\" />\n");
       out.write("\t</head>\n");
       out.write("\t<body>\n");
-      out.write("\t\t<div id=\"menu\">\n");
-      out.write("\t\t\t<ul>\n");
-      out.write("\t\t\t\t<li><a href=\"sangucheto\">Sangucheto</a></li>\n");
-      out.write("\t\t\t\t<li><a href=\"formDarDeAltaIngrediente\">Nuevo ingrediente</a></li>\n");
-      out.write("\t\t\t\t<li><a href=\"stock\">Ver Stock</a></li>\n");
-      out.write("\t\t\t\t<li><a href=\"irAAgregarStock\">Agregar Stock</a></li>\n");
-      out.write("\t\t\t\t<li><a href=\"irAEliminarIngrediente\">Eliminar Ingrediente</a></li>\n");
-      out.write("\t\t\t</ul>\n");
-      out.write("\t\t</div>\n");
-      out.write("\t\t<h1>Inicio</h1>\n");
+      out.write("\t\t<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n");
+      out.write("      <div class=\"container\">\n");
+      out.write("        <div class=\"navbar-header\">\n");
+      out.write("          <a class=\"navbar-brand\" href=\"../sangucheto\">Sangucheto</a>\n");
+      out.write("        </div>\n");
+      out.write("        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n");
+      out.write("          <ul class=\"nav navbar-nav\">\n");
+      out.write("            <li class=\"active\"><a href=\"../sangucheto\">Inicio</a></li>\n");
+      out.write("            <li><a href=\"sangucheto\">Sangucheto</a></li>\n");
+      out.write("            <li><a href=\"formDarDeAltaIngrediente\">Nuevo ingrediente</a></li>\n");
+      out.write("            <li><a href=\"stock\">Ver Stock</a></li>\n");
+      out.write("            <li><a href=\"irAAgregarStock\">Agregar Stock</a></li>\n");
+      out.write("\t\t\t\t\t\t<li><a href=\"irAEliminarIngrediente\">Eliminar Ingrediente</a></li>\n");
+      out.write("          </ul>\n");
+      out.write("        </div><!--/.nav-collapse -->\n");
+      out.write("      </div>\n");
+      out.write("    </nav>\n");
+      out.write("\n");
+      out.write("    <div class=\"container\">\n");
+      out.write("\n");
+      out.write("      <div class=\"starter-template\">\n");
+      out.write("        <h1>Bienvenido a Sangucheto!</h1>\n");
+      out.write("        <p class=\"lead\">Arm&aacute; tu sangucheto a tu gusto. Agregale tus condimentos e ingredientes favoritos! :D</p>\n");
+      out.write("      </div>\n");
+      out.write("\n");
+      out.write("    </div><!-- /.container -->\n");
+      out.write("\n");
       out.write("\t</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -78,5 +109,43 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_005furl_005f0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f0.setParent(null);
+    // /index.jsp(6,15) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005furl_005f0.setValue("/recursos/css/bootstrap.min.css");
+    int _jspx_eval_c_005furl_005f0 = _jspx_th_c_005furl_005f0.doStartTag();
+    if (_jspx_th_c_005furl_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f0);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005furl_005f1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_005furl_005f1 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_005furl_005f1.setPageContext(_jspx_page_context);
+    _jspx_th_c_005furl_005f1.setParent(null);
+    // /index.jsp(7,17) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005furl_005f1.setValue("/recursos/css/starter-template.css");
+    int _jspx_eval_c_005furl_005f1 = _jspx_th_c_005furl_005f1.doStartTag();
+    if (_jspx_th_c_005furl_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f1);
+      return true;
+    }
+    _005fjspx_005ftagPool_005fc_005furl_0026_005fvalue_005fnobody.reuse(_jspx_th_c_005furl_005f1);
+    return false;
   }
 }
