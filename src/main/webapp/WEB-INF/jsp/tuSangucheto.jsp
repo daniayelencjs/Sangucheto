@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<title>Arma tu sangucheto</title>
+	<title>Tu sangucheto</title>
 			<%@include file="/recursos/includes/recursos.html" %>
 	</head>
 	<body>
@@ -13,7 +13,7 @@
     <div class="container">
       <div class="starter-template">
         
-        <h1>Arma tu sangucheto</h1>
+        <h1>Tu sangucheto</h1>
         
         <div class="row">
           <div class="col-md-4">
@@ -52,7 +52,7 @@
                 <h3>Precio</h3>
                   <p>$${precio}</p>
                 <p>
-                  <a class="btn btn-primary" href="tuSangucheto" role="button">Listo! &raquo;</a>
+                  <a class="btn btn-primary" href="#" role="button">Listo! &raquo;</a>
                 </p>
               </div>
             </div>
@@ -92,50 +92,6 @@
           </div>
         </div>
 --%>
-        <hr>
-
-        <div class="row">
-          <div class="col-md-8">
-          	<form:form class="form-horizontal" action="agregarIngredienteASangucheto" commandName="ingredienteAgregar" role="form" method="post">
-          		<div class="form-group">
-          			<label for="ingrediente" class="control-label col-md-3">Agregar ingrediente</label>
-                <div class="col-md-6">
-									<form:select class="form-control" id="ingrediente" path="nombre">
-										<c:forEach var="ingrediente" items="${ingredientesStock}">
-											<form:option value="${ingrediente.nombre}" > ${ingrediente.nombre} </form:option> 
-										</c:forEach>
-									</form:select>
-								</div>
-								<div class="col-md-2">
-									<input type="submit" class="btn btn-primary" value="Agregar al Sangucheto"/>
-								</div>
-							</div>
-						</form:form>
-						
-						<form:form class="form-horizontal" action="agregarCondimentoASangucheto" commandName="condimentoAgregar" role="form" method="post">
-							<div class="form-group">
-          			<label for="condimento" class="control-label col-md-3">Agregar condimento</label>
-                <div class="col-md-6">
-									<form:select class="form-control" id="condimento" path="nombre">
-										<c:forEach var="condimento" items="${condimentosStock}">				
-											<form:option value="${condimento.nombre}" > ${condimento.nombre} </form:option> 
-										</c:forEach>
-									</form:select>
-								</div>
-								<div class="col-md-2">
-									<input type="submit" class="btn btn-primary" value="Agregar al Sangucheto"/>
-								</div>
-              </div>
-						</form:form>
-          </div> 
-        </div>
-
-        <hr>
-
-        <div class="row">
-          <a class="btn btn-primary" href="cancelarSangucheto" role="button">&laquo; Cancelar</a>
-        </div>
-
       </div>
     </div><!-- /.container -->
 

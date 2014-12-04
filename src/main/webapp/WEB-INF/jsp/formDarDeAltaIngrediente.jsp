@@ -10,26 +10,41 @@
 
 		<%@include file="/recursos/includes/navbar.html" %>
 
-		<form:form action="darDeAltaIngrediente" method="POST" commandName="ingrediente" role="form">
-		
-			Nombre: 
-			<form:input path="nombre"/>
-			<br/>
-			Precio: 
-			<form:input path="precio"/>
-			<br/>
-			Tipo Ingrediente:
-			<form:select path="tipo">
-            	<form:options items="${tipos}"/>
-        	</form:select>
-			<br/>				
-			<input type="submit" value="Dar de alta"/>
-		
-		</form:form>
+		<div class="container">
+      <div class="starter-template">
+      	<div class="row">
+          <div class="col-md-12">
+          	<form:form class="form-horizontal" action="darDeAltaIngrediente" commandName="ingrediente" role="form" method="post">
+          		<div class="form-group">
+          			<label for="nombre" class="control-label col-md-4">Nombre</label>
+                <div class="col-md-4">
+									<form:input class="form-control" id="nombre" path="nombre"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="precio" class="control-label col-md-4">Precio</label>
+                <div class="col-md-4">
+									<form:input class="form-control" id="precio" path="precio"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="tipo" class="control-label col-md-4">Tipo</label>
+                <div class="col-md-4">
+									<form:select class="form-control" id="precio" path="tipo">
+				            <form:options items="${tipos}"/>
+				        	</form:select>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary" value="Dar de alta"/>
+							</div>
+						</form:form>
+      </div>
+    </div>
 
 		<script type="text/javascript">
-      $(function() {
-        $("#navbar ul li:contains(Nuevo ingrediente)").addClass("active");
+      $(document).ready(function() {
+        $("#navbar ul li:contains(Nuevo Ingrediente)").addClass("active");
       });
     </script>
 

@@ -147,4 +147,24 @@ public class Controlador {
 		ingrediente = Stock.getInstance().buscarIngrediente(ingrediente);
 		Sanguchetto.getInstance().agregarIngrediente(ingrediente);
 	}
+	
+	@RequestMapping("/submitSangucheto")
+	public ModelAndView submitSangucheto() {
+		for(Ingrediente each : Sanguchetto.getInstance().verIngredientes()) {
+			Stock.getInstance().comprarIngrediente(each, 1);
+		}
+		
+		ModelMap miMap = new ModelMap();	
+		miMap.put("ingredientesSangucheto", Sanguchetto.getInstance().verIngredientes());
+		miMap.put("condimentosSangucheto", Sanguchetto.getInstance().verCondimentos());
+		miMap.put("precio", Sanguchetto.getInstance().getPrecio());
+		
+		return new ModelAndView("tuSangucheto",miMap);
+	}
+	
+	@RequestMapping("/cancelarSangucheto")
+	public ModelAndView cancelarSangucheto() {
+		Sanguchetto.getInstance().vaciar();
+		return new ModelAndView("redirect:/sangucheto");
+	}
 }

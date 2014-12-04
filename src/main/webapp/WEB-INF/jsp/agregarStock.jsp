@@ -23,8 +23,8 @@
 		</form:form>
 		
 		<script type="text/javascript">
-      $(function() {
-        $("#navbar ul li:contains(Agregar stock)").addClass("active");
+      $(document).ready(function() {
+        $("#navbar ul li:contains(Agregar Stock)").addClass("active");
       });
     </script>
 

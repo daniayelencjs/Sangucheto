@@ -32,13 +32,13 @@
 								</c:forEach>
               </tbody>
 						</table>
-          </div>
-      </div>
+        </div><!-- /.table-responsive -->
+      </div><!-- /.starter-template -->
     </div><!-- /.container -->
 
     <script type="text/javascript">
-      $(function() {
-        $("#navbar ul li:contains(Ver stock)").addClass("active");
+      $(document).ready(function() {
+        $("#navbar ul li:contains(Ver Stock)").addClass("active");
       });
     </script>
 

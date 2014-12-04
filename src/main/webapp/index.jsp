@@ -19,7 +19,7 @@
     </div><!-- /.container -->
 
     <script type="text/javascript">
-      $(function() {
+      $(document).ready(function() {
         $("#navbar ul li:contains(Inicio)").addClass("active");
       });
     </script>

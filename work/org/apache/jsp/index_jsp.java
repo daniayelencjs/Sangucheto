@@ -92,7 +92,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <ul class=\"nav navbar-nav\">\r\n");
       out.write("        <li><a href=\"../sangucheto\">Inicio</a></li>\r\n");
       out.write("        <li><a href=\"sangucheto\">Sangucheto</a></li>\r\n");
-      out.write("        <li><a href=\"formDarDeAltaIngrediente\">Nuevo ingrediente</a></li>\r\n");
+      out.write("        <li><a href=\"formDarDeAltaIngrediente\">Nuevo Ingrediente</a></li>\r\n");
       out.write("        <li><a href=\"stock\">Ver Stock</a></li>\r\n");
       out.write("        <li><a href=\"irAAgregarStock\">Agregar Stock</a></li>\r\n");
       out.write("        <li><a href=\"irAEliminarIngrediente\">Eliminar Ingrediente</a></li>\r\n");
@@ -112,7 +112,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div><!-- /.container -->\n");
       out.write("\n");
       out.write("    <script type=\"text/javascript\">\n");
-      out.write("      $(function() {\n");
+      out.write("      $(document).ready(function() {\n");
       out.write("        $(\"#navbar ul li:contains(Inicio)\").addClass(\"active\");\n");
       out.write("      });\n");
       out.write("    </script>\n");

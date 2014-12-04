@@ -21,8 +21,8 @@
 		</form:form>
 
 		<script type="text/javascript">
-      $(function() {
-        $("#navbar ul li:contains(Eliminar ingrediente)").addClass("active");
+      $(document).ready(function() {
+        $("#navbar ul li:contains(Eliminar Ingrediente)").addClass("active");
       });
     </script>
 		

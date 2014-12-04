@@ -9,9 +9,13 @@
 
 		<%@include file="/recursos/includes/navbar.html" %>
 
-		<h1>Resultado</h1>
-		
-		<p> ${mensaje} </p>
-		
+		<div class="container">
+
+      <div class="starter-template">
+        <h1>Resultado</h1>
+        <p class="lead">${mensaje}</p>
+      </div>
+
+    </div><!-- /.container -->
 	</body>
 </html>

@@ -96,7 +96,7 @@ public final class stock_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <ul class=\"nav navbar-nav\">\r\n");
       out.write("        <li><a href=\"../sangucheto\">Inicio</a></li>\r\n");
       out.write("        <li><a href=\"sangucheto\">Sangucheto</a></li>\r\n");
-      out.write("        <li><a href=\"formDarDeAltaIngrediente\">Nuevo ingrediente</a></li>\r\n");
+      out.write("        <li><a href=\"formDarDeAltaIngrediente\">Nuevo Ingrediente</a></li>\r\n");
       out.write("        <li><a href=\"stock\">Ver Stock</a></li>\r\n");
       out.write("        <li><a href=\"irAAgregarStock\">Agregar Stock</a></li>\r\n");
       out.write("        <li><a href=\"irAEliminarIngrediente\">Eliminar Ingrediente</a></li>\r\n");
@@ -126,13 +126,13 @@ public final class stock_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("              </tbody>\r\n");
       out.write("\t\t\t\t\t\t</table>\r\n");
-      out.write("          </div>\r\n");
-      out.write("      </div>\r\n");
+      out.write("        </div><!-- /.table-responsive -->\r\n");
+      out.write("      </div><!-- /.starter-template -->\r\n");
       out.write("    </div><!-- /.container -->\r\n");
       out.write("\r\n");
       out.write("    <script type=\"text/javascript\">\r\n");
-      out.write("      $(function() {\r\n");
-      out.write("        $(\"#navbar ul li:contains(Ver stock)\").addClass(\"active\");\r\n");
+      out.write("      $(document).ready(function() {\r\n");
+      out.write("        $(\"#navbar ul li:contains(Ver Stock)\").addClass(\"active\");\r\n");
       out.write("      });\r\n");
       out.write("    </script>\r\n");
       out.write("\r\n");
