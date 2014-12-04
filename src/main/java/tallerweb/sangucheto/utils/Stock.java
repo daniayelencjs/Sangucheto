@@ -44,7 +44,7 @@ public class Stock {
 	public List<Ingrediente> listarIngredientesEnStock() {
 		List<Ingrediente> resultado = new LinkedList<Ingrediente>();
 		for(Ingrediente each : this.stock.keySet()) {
-			if (each.getTipo().equals(TipoIngrediente.INGREDIENTE) && this.stock.get(each) > 0) {
+			if (each.getTipo().equals(TipoIngrediente.INGREDIENTE) && this.stock.get(each).compareTo(0) > 0) {
 				resultado.add(each);
 			}
 		}
@@ -54,7 +54,7 @@ public class Stock {
 	public List<Ingrediente> listarCondimentosEnStock() {
 		List<Ingrediente> resultado = new LinkedList<Ingrediente>();
 		for(Ingrediente each : this.stock.keySet()) {
-			if (each.getTipo().equals(TipoIngrediente.CONDIMENTO) && this.stock.get(each) > 0) {
+			if (each.getTipo().equals(TipoIngrediente.CONDIMENTO) && this.stock.get(each).compareTo(0) > 0) {
 				resultado.add(each);
 			}
 		}
@@ -134,6 +134,18 @@ public class Stock {
 		Integer nuevaCantidad = this.stock.get(ingrediente) - unidades;
 		this.stock.put(ingrediente, nuevaCantidad);
 		return true;
+	}
+	
+	/*
+	 * Busca un ingrediente dentro del stock por el nombre y lo devuelve
+	 */
+	public Ingrediente buscarIngrediente(Ingrediente ingredienteBuscar) {
+		for(Ingrediente each : this.stock.keySet()) {
+			if (each.equals(ingredienteBuscar)) {
+				return each;
+			}
+		}
+		return null;
 	}
 	
 	/**

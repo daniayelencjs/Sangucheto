@@ -6,6 +6,7 @@ import org.junit.Test;
 import tallerweb.sangucheto.model.Ingrediente;
 import tallerweb.sangucheto.model.TipoIngrediente;
 import tallerweb.sangucheto.utils.Sanguchetto;
+import tallerweb.sangucheto.utils.Stock;
 
 public class SanguchettoTest {
 
@@ -135,5 +136,35 @@ public class SanguchettoTest {
     	Sanguchetto.getInstance().agregarIngrediente(queso);
     	
     	Assert.assertTrue(Sanguchetto.getInstance().getPrecio() == 5);
+    }
+    
+    @Test
+    public void sarasa() {
+    	Ingrediente mostaza = new Ingrediente();
+    	mostaza.setNombre("Mostaza");
+    	mostaza.setPrecio(0.50);
+    	mostaza.setTipo(TipoIngrediente.CONDIMENTO);
+    	
+    	Ingrediente lechuga = new Ingrediente();
+    	lechuga.setNombre("Lechuga");
+    	lechuga.setPrecio(2.50);
+    	lechuga.setTipo(TipoIngrediente.INGREDIENTE);
+    	
+    	Ingrediente queso = new Ingrediente();
+    	queso.setNombre("Queso");
+    	queso.setPrecio(2.00);
+    	queso.setTipo(TipoIngrediente.INGREDIENTE);
+    	
+    	Stock.getInstance().agregarIngrediente(queso);
+    	Stock.getInstance().agregarIngrediente(lechuga);
+    	Stock.getInstance().agregarIngrediente(mostaza);
+    	
+    	Stock.getInstance().agregarStock(queso, 12);
+    	Stock.getInstance().agregarStock(lechuga, 43);
+    	Stock.getInstance().agregarStock(mostaza, 24);
+    	
+    	for(Ingrediente cada : Stock.getInstance().listarIngredientesEnStock()) {
+			System.out.println(cada.getNombre());
+		}
     }
 }

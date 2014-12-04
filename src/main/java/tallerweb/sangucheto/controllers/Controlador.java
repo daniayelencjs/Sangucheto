@@ -97,7 +97,7 @@ public class Controlador {
 		ingredienteNuevo.setNombre(ingrediente.getNombre());
 		ingredienteNuevo.setPrecio(ingrediente.getPrecio());
 		
-		if(ingrediente.getTipo() == "INGREDIENTE"){
+		if(ingrediente.getTipo().equals("INGREDIENTE")){
 			ingredienteNuevo.setTipo(TipoIngrediente.INGREDIENTE);
 		} else {
 			ingredienteNuevo.setTipo(TipoIngrediente.CONDIMENTO);
@@ -110,7 +110,7 @@ public class Controlador {
 	
 	@RequestMapping("/sangucheto")
 	public ModelAndView irASangucheto() {
-		ModelMap miMap = new ModelMap();
+		ModelMap miMap = new ModelMap();	
 		miMap.put("ingredientesSangucheto", Sanguchetto.getInstance().verIngredientes());
 		miMap.put("condimentosSangucheto", Sanguchetto.getInstance().verCondimentos());
 		miMap.put("precio", Sanguchetto.getInstance().getPrecio());
@@ -123,20 +123,19 @@ public class Controlador {
 	}
 	
 	@RequestMapping(value="/agregarIngredienteASangucheto",method=RequestMethod.POST)
-	public void agregarIngredienteASangucheto(@ModelAttribute("ingredienteAgregar") Ingrediente ingrediente) {
+	public ModelAndView agregarIngredienteASangucheto(@ModelAttribute("ingredienteAgregar") Ingrediente ingrediente) {
 		agregarASangucheto(ingrediente);
+		return new ModelAndView("redirect:/sangucheto");
 	}
 	
 	@RequestMapping(value="/agregarCondimentoASangucheto",method=RequestMethod.POST)
-	public void agregarCondimentoASangucheto(@ModelAttribute("condimentoAgregar") Ingrediente ingrediente) {
+	public ModelAndView agregarCondimentoASangucheto(@ModelAttribute("condimentoAgregar") Ingrediente ingrediente) {
 		agregarASangucheto(ingrediente);
+		return new ModelAndView("sangucheto");
 	}
 	
-	public ModelAndView agregarASangucheto(Ingrediente ingrediente) {
+	public void agregarASangucheto(Ingrediente ingrediente) {
+		ingrediente = Stock.getInstance().buscarIngrediente(ingrediente);
 		Sanguchetto.getInstance().agregarIngrediente(ingrediente);
-		//Falta ver como hacemos para agregarle el ingrediente completo con su precio y tipo
-		//Pense en hacer un metodo en Stock que recorra la lista de ingredientes buscando el que necesitamos y lo devuelva completo
-		//Hay que ver
-		return null;
 	}
 }

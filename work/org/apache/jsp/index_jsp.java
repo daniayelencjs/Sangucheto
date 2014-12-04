@@ -60,8 +60,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t<li><a href=\"sangucheto\">Sangucheto</a></li>\n");
       out.write("\t\t\t\t<li><a href=\"formDarDeAltaIngrediente\">Nuevo ingrediente</a></li>\n");
       out.write("\t\t\t\t<li><a href=\"stock\">Ver Stock</a></li>\n");
-      out.write("\t\t\t\t<li><a href=\"agregarStock\">Agregar Stock</a></li>\n");
-      out.write("\t\t\t\t<li><a href=\"eliminarIngrediente\">Eliminar Ingrediente</a></li>\n");
+      out.write("\t\t\t\t<li><a href=\"irAAgregarStock\">Agregar Stock</a></li>\n");
+      out.write("\t\t\t\t<li><a href=\"irAEliminarIngrediente\">Eliminar Ingrediente</a></li>\n");
       out.write("\t\t\t</ul>\n");
       out.write("\t\t</div>\n");
       out.write("\t\t<h1>Inicio</h1>\n");

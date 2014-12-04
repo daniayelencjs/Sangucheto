@@ -12,7 +12,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems;
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005foption_0026_005fvalue;
 
@@ -25,7 +25,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fform_005foption_0026_005fvalue = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
@@ -34,7 +34,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspDestroy() {
     _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.release();
-    _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction.release();
+    _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction.release();
     _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath.release();
     _005fjspx_005ftagPool_005fform_005foption_0026_005fvalue.release();
   }
@@ -96,13 +96,13 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\r\n");
       out.write("\t\t");
       //  form:form
-      org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
+      org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
       _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
       _jspx_th_form_005fform_005f0.setParent(null);
       // /WEB-INF/jsp/sangucheto.jsp(30,2) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setAction("agregarIngredienteASangucheto");
-      // /WEB-INF/jsp/sangucheto.jsp(30,2) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_form_005fform_005f0.setModelAttribute("ingredienteAgregar");
+      // /WEB-INF/jsp/sangucheto.jsp(30,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_form_005fform_005f0.setCommandName("ingredienteAgregar");
       // /WEB-INF/jsp/sangucheto.jsp(30,2) null
       _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "role", new String("form"));
       // /WEB-INF/jsp/sangucheto.jsp(30,2) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
@@ -140,7 +140,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
                     int _jspx_eval_c_005fforEach_005f2 = _jspx_th_c_005fforEach_005f2.doStartTag();
                     if (_jspx_eval_c_005fforEach_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
                       do {
-                        out.write("\t\t\t\t\r\n");
+                        out.write("\r\n");
                         out.write("\t\t\t\t\t");
                         //  form:option
                         org.springframework.web.servlet.tags.form.OptionTag _jspx_th_form_005foption_005f0 = (org.springframework.web.servlet.tags.form.OptionTag) _005fjspx_005ftagPool_005fform_005foption_0026_005fvalue.get(org.springframework.web.servlet.tags.form.OptionTag.class);
@@ -241,19 +241,19 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_form_005fform_005f0.doCatch(_jspx_exception);
       } finally {
         _jspx_th_form_005fform_005f0.doFinally();
-        _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction.reuse(_jspx_th_form_005fform_005f0);
+        _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction.reuse(_jspx_th_form_005fform_005f0);
       }
       out.write("\r\n");
       out.write("\t\t\r\n");
       out.write("\t\t");
       //  form:form
-      org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f1 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
+      org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f1 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
       _jspx_th_form_005fform_005f1.setPageContext(_jspx_page_context);
       _jspx_th_form_005fform_005f1.setParent(null);
       // /WEB-INF/jsp/sangucheto.jsp(39,2) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f1.setAction("agregarCondimentoASangucheto");
-      // /WEB-INF/jsp/sangucheto.jsp(39,2) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_form_005fform_005f1.setModelAttribute("condimentoAgregar");
+      // /WEB-INF/jsp/sangucheto.jsp(39,2) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_form_005fform_005f1.setCommandName("condimentoAgregar");
       // /WEB-INF/jsp/sangucheto.jsp(39,2) null
       _jspx_th_form_005fform_005f1.setDynamicAttribute(null, "role", new String("form"));
       // /WEB-INF/jsp/sangucheto.jsp(39,2) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
@@ -392,7 +392,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_form_005fform_005f1.doCatch(_jspx_exception);
       } finally {
         _jspx_th_form_005fform_005f1.doFinally();
-        _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmodelAttribute_005fmethod_005faction.reuse(_jspx_th_form_005fform_005f1);
+        _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005faction.reuse(_jspx_th_form_005fform_005f1);
       }
       out.write("\r\n");
       out.write("\t\t\r\n");

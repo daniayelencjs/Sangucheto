@@ -8,8 +8,8 @@
 				<li><a href="sangucheto">Sangucheto</a></li>
 				<li><a href="formDarDeAltaIngrediente">Nuevo ingrediente</a></li>
 				<li><a href="stock">Ver Stock</a></li>
-				<li><a href="agregarStock">Agregar Stock</a></li>
-				<li><a href="eliminarIngrediente">Eliminar Ingrediente</a></li>
+				<li><a href="irAAgregarStock">Agregar Stock</a></li>
+				<li><a href="irAEliminarIngrediente">Eliminar Ingrediente</a></li>
 			</ul>
 		</div>
 		<h1>Inicio</h1>

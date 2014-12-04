@@ -27,16 +27,16 @@
 			</div>
 		</div>
 		
-		<form:form action="agregarIngredienteASangucheto" modelAttribute="ingredienteAgregar" role="form" method="post">
+		<form:form action="agregarIngredienteASangucheto" commandName="ingredienteAgregar" role="form" method="post">
 			<form:select path="nombre">
-				<c:forEach var="ingrediente" items="${ingredientesStock}">				
+				<c:forEach var="ingrediente" items="${ingredientesStock}">
 					<form:option value="${ingrediente.nombre}" > ${ingrediente.nombre} </form:option> 
 				</c:forEach>
 			</form:select>
 			<input type="submit" value="Agregar al Sangucheto"/>
 		</form:form>
 		
-		<form:form action="agregarCondimentoASangucheto" modelAttribute="condimentoAgregar" role="form" method="post">
+		<form:form action="agregarCondimentoASangucheto" commandName="condimentoAgregar" role="form" method="post">
 			<form:select path="nombre">
 				<c:forEach var="condimento" items="${condimentosStock}">				
 					<form:option value="${condimento.nombre}" > ${condimento.nombre} </form:option> 
