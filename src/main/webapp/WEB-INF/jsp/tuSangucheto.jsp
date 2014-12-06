@@ -13,10 +13,10 @@
     <div class="container">
       <div class="starter-template">
         
-        <h1>Tu sangucheto</h1>
+        <h1>As&iacute; qued&oacute; tu sangucheto</h1>
         
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <table class="table table-striped">
                 <thead>
                   <tr>
@@ -31,7 +31,7 @@
               </table>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
             <table class="table table-striped">
                 <thead>
                   <tr>
@@ -45,53 +45,7 @@
                 </tbody>
               </table>
           </div>
-
-          <div class="col-md-4">
-            <div class="jumbotron">
-              <div class="container">
-                <h3>Precio</h3>
-                  <p>$${precio}</p>
-                <p>
-                  <a class="btn btn-primary" href="#" role="button">Listo! &raquo;</a>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-
-
-
-<%--
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list-group">
-              <li class="list-group-item active">Ingredientes</li>
-            	<c:forEach var="ingrediente" items="${ingredientesSangucheto}">				
-								<li class="list-group-item">${ingrediente.nombre}</li>
-							</c:forEach>
-            </ul>
-          </div>
-
-          <div class="col-md-4">
-            <ul class="list-group">
-              <li class="list-group-item active">Condimentos</li>
-            	<c:forEach var="condimento" items="${condimentosSangucheto}">				
-								<li class="list-group-item">${condimento.nombre}</li>
-							</c:forEach>
-            </ul>
-          </div>
-
-          <div class="col-md-4">
-            <div class="jumbotron">
-              <div class="container">
-                <h3>Precio</h3>
-                <p>$${precio}</p>
-                <p><a class="btn btn-primary" href="#" role="button">Listo! &raquo;</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
---%>
       </div>
     </div><!-- /.container -->
 

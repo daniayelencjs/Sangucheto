@@ -161,15 +161,12 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${precio}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("</p>\r\n");
       out.write("                <p>\r\n");
-      out.write("                  <a class=\"btn btn-primary\" href=\"tuSangucheto\" role=\"button\">Listo! &raquo;</a>\r\n");
+      out.write("                  <a class=\"btn btn-primary\" href=\"submitSangucheto\" role=\"button\">Listo! &raquo;</a>\r\n");
       out.write("                </p>\r\n");
       out.write("              </div>\r\n");
       out.write("            </div>\r\n");
       out.write("          </div>\r\n");
       out.write("        </div>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("\r\n");
       out.write("        <hr>\r\n");
       out.write("\r\n");
@@ -180,15 +177,15 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005fclass_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
       _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
       _jspx_th_form_005fform_005f0.setParent(null);
-      // /WEB-INF/jsp/sangucheto.jsp(99,11) null
+      // /WEB-INF/jsp/sangucheto.jsp(66,11) null
       _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "class", new String("form-horizontal"));
-      // /WEB-INF/jsp/sangucheto.jsp(99,11) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/sangucheto.jsp(66,11) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setAction("agregarIngredienteASangucheto");
-      // /WEB-INF/jsp/sangucheto.jsp(99,11) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/sangucheto.jsp(66,11) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setCommandName("ingredienteAgregar");
-      // /WEB-INF/jsp/sangucheto.jsp(99,11) null
+      // /WEB-INF/jsp/sangucheto.jsp(66,11) null
       _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "role", new String("form"));
-      // /WEB-INF/jsp/sangucheto.jsp(99,11) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/sangucheto.jsp(66,11) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setMethod("post");
       int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
       try {
@@ -204,11 +201,11 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
             org.springframework.web.servlet.tags.form.SelectTag _jspx_th_form_005fselect_005f0 = (org.springframework.web.servlet.tags.form.SelectTag) _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath_005fid_005fclass.get(org.springframework.web.servlet.tags.form.SelectTag.class);
             _jspx_th_form_005fselect_005f0.setPageContext(_jspx_page_context);
             _jspx_th_form_005fselect_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/sangucheto.jsp(103,9) null
+            // /WEB-INF/jsp/sangucheto.jsp(70,9) null
             _jspx_th_form_005fselect_005f0.setDynamicAttribute(null, "class", new String("form-control"));
-            // /WEB-INF/jsp/sangucheto.jsp(103,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/sangucheto.jsp(70,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005fselect_005f0.setId("ingrediente");
-            // /WEB-INF/jsp/sangucheto.jsp(103,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/sangucheto.jsp(70,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005fselect_005f0.setPath("nombre");
             int[] _jspx_push_body_count_form_005fselect_005f0 = new int[] { 0 };
             try {
@@ -221,10 +218,10 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
                   org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
                   _jspx_th_c_005fforEach_005f2.setPageContext(_jspx_page_context);
                   _jspx_th_c_005fforEach_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fselect_005f0);
-                  // /WEB-INF/jsp/sangucheto.jsp(104,10) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+                  // /WEB-INF/jsp/sangucheto.jsp(71,10) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
                   _jspx_th_c_005fforEach_005f2.setVar("ingrediente");
-                  // /WEB-INF/jsp/sangucheto.jsp(104,10) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
-                  _jspx_th_c_005fforEach_005f2.setItems(new org.apache.jasper.el.JspValueExpression("/WEB-INF/jsp/sangucheto.jsp(104,10) '${ingredientesStock}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${ingredientesStock}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+                  // /WEB-INF/jsp/sangucheto.jsp(71,10) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
+                  _jspx_th_c_005fforEach_005f2.setItems(new org.apache.jasper.el.JspValueExpression("/WEB-INF/jsp/sangucheto.jsp(71,10) '${ingredientesStock}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${ingredientesStock}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
                   int[] _jspx_push_body_count_c_005fforEach_005f2 = new int[] { 0 };
                   try {
                     int _jspx_eval_c_005fforEach_005f2 = _jspx_th_c_005fforEach_005f2.doStartTag();
@@ -236,7 +233,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
                         org.springframework.web.servlet.tags.form.OptionTag _jspx_th_form_005foption_005f0 = (org.springframework.web.servlet.tags.form.OptionTag) _005fjspx_005ftagPool_005fform_005foption_0026_005fvalue.get(org.springframework.web.servlet.tags.form.OptionTag.class);
                         _jspx_th_form_005foption_005f0.setPageContext(_jspx_page_context);
                         _jspx_th_form_005foption_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f2);
-                        // /WEB-INF/jsp/sangucheto.jsp(105,11) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+                        // /WEB-INF/jsp/sangucheto.jsp(72,11) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
                         _jspx_th_form_005foption_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ingrediente.nombre}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
                         int[] _jspx_push_body_count_form_005foption_005f0 = new int[] { 0 };
                         try {
@@ -317,7 +314,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
             out.write("\r\n");
             out.write("\t\t\t\t\t\t\t\t</div>\r\n");
             out.write("\t\t\t\t\t\t\t\t<div class=\"col-md-2\">\r\n");
-            out.write("\t\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"btn btn-primary\" value=\"Agregar al Sangucheto\"/>\r\n");
+            out.write("\t\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"btn btn-primary\" id=\"ing\" value=\"Agregar al Sangucheto\"/>\r\n");
             out.write("\t\t\t\t\t\t\t\t</div>\r\n");
             out.write("\t\t\t\t\t\t\t</div>\r\n");
             out.write("\t\t\t\t\t\t");
@@ -344,15 +341,15 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f1 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005fclass_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
       _jspx_th_form_005fform_005f1.setPageContext(_jspx_page_context);
       _jspx_th_form_005fform_005f1.setParent(null);
-      // /WEB-INF/jsp/sangucheto.jsp(115,6) null
+      // /WEB-INF/jsp/sangucheto.jsp(82,6) null
       _jspx_th_form_005fform_005f1.setDynamicAttribute(null, "class", new String("form-horizontal"));
-      // /WEB-INF/jsp/sangucheto.jsp(115,6) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/sangucheto.jsp(82,6) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f1.setAction("agregarCondimentoASangucheto");
-      // /WEB-INF/jsp/sangucheto.jsp(115,6) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/sangucheto.jsp(82,6) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f1.setCommandName("condimentoAgregar");
-      // /WEB-INF/jsp/sangucheto.jsp(115,6) null
+      // /WEB-INF/jsp/sangucheto.jsp(82,6) null
       _jspx_th_form_005fform_005f1.setDynamicAttribute(null, "role", new String("form"));
-      // /WEB-INF/jsp/sangucheto.jsp(115,6) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/sangucheto.jsp(82,6) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f1.setMethod("post");
       int[] _jspx_push_body_count_form_005fform_005f1 = new int[] { 0 };
       try {
@@ -368,11 +365,11 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
             org.springframework.web.servlet.tags.form.SelectTag _jspx_th_form_005fselect_005f1 = (org.springframework.web.servlet.tags.form.SelectTag) _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath_005fid_005fclass.get(org.springframework.web.servlet.tags.form.SelectTag.class);
             _jspx_th_form_005fselect_005f1.setPageContext(_jspx_page_context);
             _jspx_th_form_005fselect_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-            // /WEB-INF/jsp/sangucheto.jsp(119,9) null
+            // /WEB-INF/jsp/sangucheto.jsp(86,9) null
             _jspx_th_form_005fselect_005f1.setDynamicAttribute(null, "class", new String("form-control"));
-            // /WEB-INF/jsp/sangucheto.jsp(119,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/sangucheto.jsp(86,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005fselect_005f1.setId("condimento");
-            // /WEB-INF/jsp/sangucheto.jsp(119,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/sangucheto.jsp(86,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005fselect_005f1.setPath("nombre");
             int[] _jspx_push_body_count_form_005fselect_005f1 = new int[] { 0 };
             try {
@@ -385,10 +382,10 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
                   org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f3 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
                   _jspx_th_c_005fforEach_005f3.setPageContext(_jspx_page_context);
                   _jspx_th_c_005fforEach_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fselect_005f1);
-                  // /WEB-INF/jsp/sangucheto.jsp(120,10) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+                  // /WEB-INF/jsp/sangucheto.jsp(87,10) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
                   _jspx_th_c_005fforEach_005f3.setVar("condimento");
-                  // /WEB-INF/jsp/sangucheto.jsp(120,10) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
-                  _jspx_th_c_005fforEach_005f3.setItems(new org.apache.jasper.el.JspValueExpression("/WEB-INF/jsp/sangucheto.jsp(120,10) '${condimentosStock}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${condimentosStock}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
+                  // /WEB-INF/jsp/sangucheto.jsp(87,10) name = items type = javax.el.ValueExpression reqTime = true required = false fragment = false deferredValue = true expectedTypeName = java.lang.Object deferredMethod = false methodSignature = null
+                  _jspx_th_c_005fforEach_005f3.setItems(new org.apache.jasper.el.JspValueExpression("/WEB-INF/jsp/sangucheto.jsp(87,10) '${condimentosStock}'",_el_expressionfactory.createValueExpression(_jspx_page_context.getELContext(),"${condimentosStock}",java.lang.Object.class)).getValue(_jspx_page_context.getELContext()));
                   int[] _jspx_push_body_count_c_005fforEach_005f3 = new int[] { 0 };
                   try {
                     int _jspx_eval_c_005fforEach_005f3 = _jspx_th_c_005fforEach_005f3.doStartTag();
@@ -400,7 +397,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
                         org.springframework.web.servlet.tags.form.OptionTag _jspx_th_form_005foption_005f1 = (org.springframework.web.servlet.tags.form.OptionTag) _005fjspx_005ftagPool_005fform_005foption_0026_005fvalue.get(org.springframework.web.servlet.tags.form.OptionTag.class);
                         _jspx_th_form_005foption_005f1.setPageContext(_jspx_page_context);
                         _jspx_th_form_005foption_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f3);
-                        // /WEB-INF/jsp/sangucheto.jsp(121,11) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+                        // /WEB-INF/jsp/sangucheto.jsp(88,11) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
                         _jspx_th_form_005foption_005f1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${condimento.nombre}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
                         int[] _jspx_push_body_count_form_005foption_005f1 = new int[] { 0 };
                         try {
@@ -481,7 +478,7 @@ public final class sangucheto_jsp extends org.apache.jasper.runtime.HttpJspBase
             out.write("\r\n");
             out.write("\t\t\t\t\t\t\t\t</div>\r\n");
             out.write("\t\t\t\t\t\t\t\t<div class=\"col-md-2\">\r\n");
-            out.write("\t\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"btn btn-primary\" value=\"Agregar al Sangucheto\"/>\r\n");
+            out.write("\t\t\t\t\t\t\t\t\t<input type=\"submit\" class=\"btn btn-primary\" id=\"con\" value=\"Agregar al Sangucheto\"/>\r\n");
             out.write("\t\t\t\t\t\t\t\t</div>\r\n");
             out.write("              </div>\r\n");
             out.write("\t\t\t\t\t\t");

@@ -52,46 +52,13 @@
                 <h3>Precio</h3>
                   <p>$${precio}</p>
                 <p>
-                  <a class="btn btn-primary" href="tuSangucheto" role="button">Listo! &raquo;</a>
+                  <a class="btn btn-primary" href="submitSangucheto" role="button">Listo! &raquo;</a>
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-
-
-<%--
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list-group">
-              <li class="list-group-item active">Ingredientes</li>
-            	<c:forEach var="ingrediente" items="${ingredientesSangucheto}">				
-								<li class="list-group-item">${ingrediente.nombre}</li>
-							</c:forEach>
-            </ul>
-          </div>
-
-          <div class="col-md-4">
-            <ul class="list-group">
-              <li class="list-group-item active">Condimentos</li>
-            	<c:forEach var="condimento" items="${condimentosSangucheto}">				
-								<li class="list-group-item">${condimento.nombre}</li>
-							</c:forEach>
-            </ul>
-          </div>
-
-          <div class="col-md-4">
-            <div class="jumbotron">
-              <div class="container">
-                <h3>Precio</h3>
-                <p>$${precio}</p>
-                <p><a class="btn btn-primary" href="#" role="button">Listo! &raquo;</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
---%>
         <hr>
 
         <div class="row">
@@ -107,7 +74,7 @@
 									</form:select>
 								</div>
 								<div class="col-md-2">
-									<input type="submit" class="btn btn-primary" value="Agregar al Sangucheto"/>
+									<input type="submit" class="btn btn-primary" id="ing" value="Agregar al Sangucheto"/>
 								</div>
 							</div>
 						</form:form>
@@ -123,7 +90,7 @@
 									</form:select>
 								</div>
 								<div class="col-md-2">
-									<input type="submit" class="btn btn-primary" value="Agregar al Sangucheto"/>
+									<input type="submit" class="btn btn-primary" id="con" value="Agregar al Sangucheto"/>
 								</div>
               </div>
 						</form:form>

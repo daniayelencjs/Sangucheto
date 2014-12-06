@@ -59,6 +59,13 @@ public class Sanguchetto {
 		}
 		return resultado;
     }
+    
+    /*
+     * Listar ingredientes y condimentos del sangucheto
+     */
+    public List<Ingrediente> listarTodosLosIngredientes(){
+    	return this.ingredientes;
+    }
 	
 	/**
 	 * Devuelve el precio total del sanguchetto.<br>

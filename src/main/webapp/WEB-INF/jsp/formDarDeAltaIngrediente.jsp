@@ -12,6 +12,7 @@
 
 		<div class="container">
       <div class="starter-template">
+      	<h1>Dar de alta ingrediente</h1>
       	<div class="row">
           <div class="col-md-12">
           	<form:form class="form-horizontal" action="darDeAltaIngrediente" commandName="ingrediente" role="form" method="post">
@@ -39,6 +40,8 @@
 								<input type="submit" class="btn btn-primary" value="Dar de alta"/>
 							</div>
 						</form:form>
+					</div>
+				</div>
       </div>
     </div>
 

@@ -140,30 +140,30 @@ public class Controlador {
 	@RequestMapping(value="/agregarCondimentoASangucheto",method=RequestMethod.POST)
 	public ModelAndView agregarCondimentoASangucheto(@ModelAttribute("condimentoAgregar") Ingrediente ingrediente) {
 		agregarASangucheto(ingrediente);
-		return new ModelAndView("sangucheto");
+		return new ModelAndView("redirect:/sangucheto");
 	}
 	
 	public void agregarASangucheto(Ingrediente ingrediente) {
 		ingrediente = Stock.getInstance().buscarIngrediente(ingrediente);
 		Sanguchetto.getInstance().agregarIngrediente(ingrediente);
+		Stock.getInstance().comprarIngrediente(ingrediente, 1);
 	}
 	
 	@RequestMapping("/submitSangucheto")
-	public ModelAndView submitSangucheto() {
-		for(Ingrediente each : Sanguchetto.getInstance().verIngredientes()) {
-			Stock.getInstance().comprarIngrediente(each, 1);
-		}
-		
+	public ModelAndView submitSangucheto() {	
 		ModelMap miMap = new ModelMap();	
 		miMap.put("ingredientesSangucheto", Sanguchetto.getInstance().verIngredientes());
 		miMap.put("condimentosSangucheto", Sanguchetto.getInstance().verCondimentos());
 		miMap.put("precio", Sanguchetto.getInstance().getPrecio());
-		
+		Sanguchetto.getInstance().vaciar();
 		return new ModelAndView("tuSangucheto",miMap);
 	}
 	
 	@RequestMapping("/cancelarSangucheto")
 	public ModelAndView cancelarSangucheto() {
+		for (Ingrediente each : Sanguchetto.getInstance().listarTodosLosIngredientes()) {
+			Stock.getInstance().agregarStock(each, 1);
+		}
 		Sanguchetto.getInstance().vaciar();
 		return new ModelAndView("redirect:/sangucheto");
 	}

@@ -117,12 +117,15 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
       out.write("\r\n");
       out.write("\t\t<div class=\"container\">\r\n");
       out.write("      <div class=\"starter-template\">\r\n");
+      out.write("      \t<h1>Dar de alta ingrediente</h1>\r\n");
       out.write("      \t<div class=\"row\">\r\n");
       out.write("          <div class=\"col-md-12\">\r\n");
       out.write("          \t");
       if (_jspx_meth_form_005fform_005f0(_jspx_page_context))
         return;
       out.write("\r\n");
+      out.write("\t\t\t\t\t</div>\r\n");
+      out.write("\t\t\t\t</div>\r\n");
       out.write("      </div>\r\n");
       out.write("    </div>\r\n");
       out.write("\r\n");
@@ -212,15 +215,15 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005frole_005fmethod_005fcommandName_005fclass_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
     _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fform_005f0.setParent(null);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(17,11) null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(18,11) null
     _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "class", new String("form-horizontal"));
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(17,11) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(18,11) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setAction("darDeAltaIngrediente");
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(17,11) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(18,11) name = commandName type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setCommandName("ingrediente");
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(17,11) null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(18,11) null
     _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "role", new String("form"));
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(17,11) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(18,11) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setMethod("post");
     int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
     try {
@@ -286,11 +289,11 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f0 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fid_005fclass_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(21,9) null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(22,9) null
     _jspx_th_form_005finput_005f0.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(21,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(22,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f0.setId("nombre");
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(21,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(22,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f0.setPath("nombre");
     int[] _jspx_push_body_count_form_005finput_005f0 = new int[] { 0 };
     try {
@@ -317,11 +320,11 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f1 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fid_005fclass_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(27,9) null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(28,9) null
     _jspx_th_form_005finput_005f1.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(27,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(28,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f1.setId("precio");
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(27,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(28,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f1.setPath("precio");
     int[] _jspx_push_body_count_form_005finput_005f1 = new int[] { 0 };
     try {
@@ -348,11 +351,11 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     org.springframework.web.servlet.tags.form.SelectTag _jspx_th_form_005fselect_005f0 = (org.springframework.web.servlet.tags.form.SelectTag) _005fjspx_005ftagPool_005fform_005fselect_0026_005fpath_005fid_005fclass.get(org.springframework.web.servlet.tags.form.SelectTag.class);
     _jspx_th_form_005fselect_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fselect_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(33,9) null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(34,9) null
     _jspx_th_form_005fselect_005f0.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(33,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(34,9) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fselect_005f0.setId("precio");
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(33,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(34,9) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fselect_005f0.setPath("tipo");
     int[] _jspx_push_body_count_form_005fselect_005f0 = new int[] { 0 };
     try {
@@ -392,7 +395,7 @@ public final class formDarDeAltaIngrediente_jsp extends org.apache.jasper.runtim
     org.springframework.web.servlet.tags.form.OptionsTag _jspx_th_form_005foptions_005f0 = (org.springframework.web.servlet.tags.form.OptionsTag) _005fjspx_005ftagPool_005fform_005foptions_0026_005fitems_005fnobody.get(org.springframework.web.servlet.tags.form.OptionsTag.class);
     _jspx_th_form_005foptions_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005foptions_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fselect_005f0);
-    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(34,16) name = items type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/formDarDeAltaIngrediente.jsp(35,16) name = items type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005foptions_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${tipos}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
     int[] _jspx_push_body_count_form_005foptions_005f0 = new int[] { 0 };
     try {
