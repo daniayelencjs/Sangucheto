@@ -5,8 +5,27 @@
 	<head>
 	<title>Arma tu sangucheto</title>
 			<%@include file="/recursos/includes/recursos.html" %>
+      <script type="text/javascript">
+        function validarSelects() {
+          var selectIngrediente = document.getElementById('ingrediente');
+          var cantidadDeOptions = selectIngrediente.childElementCount;
+
+          if (cantidadDeOptions == 0) {
+            var submitIngrediente = document.getElementById('ing');
+            submitIngrediente.disabled = "disabled";  
+          }
+
+          var selectCondimento = document.getElementById('condimento');
+          var cantidadDeOptions = selectCondimento.childElementCount;
+
+          if (cantidadDeOptions == 0) {
+            var submitIngrediente = document.getElementById('con');
+            submitIngrediente.disabled = "disabled";  
+          }
+        }
+      </script>
 	</head>
-	<body>
+	<body onload="validarSelects();">
 
 		<%@include file="/recursos/includes/navbar.html" %>
 
