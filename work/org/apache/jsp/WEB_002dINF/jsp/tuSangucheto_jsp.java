@@ -112,7 +112,7 @@ public final class tuSangucheto_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <h1>As&iacute; qued&oacute; tu sangucheto</h1>\r\n");
       out.write("        \r\n");
       out.write("        <div class=\"row\">\r\n");
-      out.write("          <div class=\"col-md-6\">\r\n");
+      out.write("          <div class=\"col-md-4\">\r\n");
       out.write("            <table class=\"table table-striped\">\r\n");
       out.write("                <thead>\r\n");
       out.write("                  <tr>\r\n");
@@ -128,7 +128,7 @@ public final class tuSangucheto_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("              </table>\r\n");
       out.write("          </div>\r\n");
       out.write("\r\n");
-      out.write("          <div class=\"col-md-6\">\r\n");
+      out.write("          <div class=\"col-md-4\">\r\n");
       out.write("            <table class=\"table table-striped\">\r\n");
       out.write("                <thead>\r\n");
       out.write("                  <tr>\r\n");
@@ -143,7 +143,21 @@ public final class tuSangucheto_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("                </tbody>\r\n");
       out.write("              </table>\r\n");
       out.write("          </div>\r\n");
+      out.write("\r\n");
+      out.write("          <div class=\"col-md-4\">\r\n");
+      out.write("            <div class=\"jumbotron\">\r\n");
+      out.write("              <div class=\"container\">\r\n");
+      out.write("                <h3>Precio</h3>\r\n");
+      out.write("                  <p>$");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${precio}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("</p>\r\n");
+      out.write("              </div>\r\n");
+      out.write("            </div>\r\n");
+      out.write("          </div>\r\n");
       out.write("        </div>\r\n");
+      out.write("\r\n");
+      out.write("        <h3>Gracias por tu compra!</h3>\r\n");
+      out.write("\r\n");
       out.write("      </div>\r\n");
       out.write("    </div><!-- /.container -->\r\n");
       out.write("\r\n");
@@ -242,11 +256,11 @@ public final class tuSangucheto_jsp extends org.apache.jasper.runtime.HttpJspBas
       int _jspx_eval_c_005fforEach_005f0 = _jspx_th_c_005fforEach_005f0.doStartTag();
       if (_jspx_eval_c_005fforEach_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\t\t\t\t\r\n");
-          out.write("\t\t\t\t\t\t\t\t\t\t<tr><td>");
+          out.write("       \r\n");
+          out.write("                    <tr><td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ingrediente.nombre}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td></tr>\r\n");
-          out.write("\t\t\t\t\t\t\t\t\t");
+          out.write("                  ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -283,11 +297,11 @@ public final class tuSangucheto_jsp extends org.apache.jasper.runtime.HttpJspBas
       int _jspx_eval_c_005fforEach_005f1 = _jspx_th_c_005fforEach_005f1.doStartTag();
       if (_jspx_eval_c_005fforEach_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\t\t\t\t\r\n");
-          out.write("\t\t\t\t\t\t\t\t\t\t<tr><td>");
+          out.write("       \r\n");
+          out.write("                    <tr><td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${condimento.nombre}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td></tr>\r\n");
-          out.write("\t\t\t\t\t\t\t\t\t");
+          out.write("                  ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;

@@ -5,27 +5,8 @@
 	<head>
 	<title>Arma tu sangucheto</title>
 			<%@include file="/recursos/includes/recursos.html" %>
-      <script type="text/javascript">
-        function validarSelects() {
-          var selectIngrediente = document.getElementById('ingrediente');
-          var cantidadDeOptions = selectIngrediente.childElementCount;
-
-          if (cantidadDeOptions == 0) {
-            var submitIngrediente = document.getElementById('ing');
-            submitIngrediente.disabled = "disabled";  
-          }
-
-          var selectCondimento = document.getElementById('condimento');
-          var cantidadDeOptions = selectCondimento.childElementCount;
-
-          if (cantidadDeOptions == 0) {
-            var submitIngrediente = document.getElementById('con');
-            submitIngrediente.disabled = "disabled";  
-          }
-        }
-      </script>
 	</head>
-	<body onload="validarSelects();">
+	<body>
 
 		<%@include file="/recursos/includes/navbar.html" %>
 
@@ -69,9 +50,9 @@
             <div class="jumbotron">
               <div class="container">
                 <h3>Precio</h3>
-                  <p>$${precio}</p>
+                  <p class="precio">$${precio}</p>
                 <p>
-                  <a class="btn btn-primary" href="submitSangucheto" role="button">Listo! &raquo;</a>
+                  <a class="btn btn-primary" id="lis" href="submitSangucheto" role="button">Listo! &raquo;</a>
                 </p>
               </div>
             </div>
@@ -128,6 +109,18 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $("#navbar ul li:contains(Sangucheto)").addClass("active");
+
+        if ($("#ingrediente").children().length == 0) {
+          $("#ing").addClass("disabled");
+        }
+
+        if ($("#condimento").children().length == 0) {
+          $("#con").addClass("disabled");
+        }
+
+        if ($(".precio").html() == "$0.0" ) {
+          $("#lis").addClass("disabled");
+        }
       });
     </script>
 
