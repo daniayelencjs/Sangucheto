@@ -51,11 +51,17 @@ public class SanguchettoTest {
 
     @Test
     public void testAgregarIngrediente() {
+    	Ingrediente tomate = new Ingrediente();
+    	tomate.setNombre("tomate");
+    	tomate.setPrecio(2.00);
+    	tomate.setTipo(TipoIngrediente.INGREDIENTE);
+        
+        Sanguchetto.getInstance().agregarIngrediente(tomate);
     	
     	Integer ingredientes = Sanguchetto.getInstance().verIngredientes().size();
     	Integer condimentos = Sanguchetto.getInstance().verCondimentos().size();
     	
-    	Assert.assertTrue(ingredientes+condimentos == 3);
+    	Assert.assertTrue(ingredientes+condimentos == 4);
     }
 
     @Test
