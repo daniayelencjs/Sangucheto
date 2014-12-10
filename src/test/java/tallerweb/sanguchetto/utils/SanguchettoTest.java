@@ -1,6 +1,8 @@
 package tallerweb.sanguchetto.utils;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import tallerweb.sangucheto.model.Ingrediente;
@@ -9,27 +11,36 @@ import tallerweb.sangucheto.utils.Sanguchetto;
 
 public class SanguchettoTest {
 
+    @Before // Este metodo se ejecuta antes de cada Test
+    public void inicializar() {
+        Ingrediente mostaza = new Ingrediente();
+        mostaza.setNombre("Mostaza");
+        mostaza.setPrecio(0.50);
+        mostaza.setTipo(TipoIngrediente.CONDIMENTO);
+        
+        Ingrediente lechuga = new Ingrediente();
+        lechuga.setNombre("Lechuga");
+        lechuga.setPrecio(2.50);
+        lechuga.setTipo(TipoIngrediente.INGREDIENTE);
+        
+        Ingrediente queso = new Ingrediente();
+        queso.setNombre("Queso");
+        queso.setPrecio(2.00);
+        queso.setTipo(TipoIngrediente.INGREDIENTE);
+        
+        Sanguchetto.getInstance().agregarIngrediente(mostaza);
+        Sanguchetto.getInstance().agregarIngrediente(lechuga);
+        Sanguchetto.getInstance().agregarIngrediente(queso);
+    }
+
+    @After // Este metodo se ejecuta despues de cada Test
+    public void limpiar() {
+        Sanguchetto.getInstance().vaciar();
+    }
+
     @Test
     public void testVaciar() {
-    	Ingrediente mostaza = new Ingrediente();
-    	mostaza.setNombre("Mostaza");
-    	mostaza.setPrecio(0.50);
-    	mostaza.setTipo(TipoIngrediente.CONDIMENTO);
-    	
-    	Ingrediente lechuga = new Ingrediente();
-    	lechuga.setNombre("Lechuga");
-    	lechuga.setPrecio(2.50);
-    	lechuga.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Ingrediente queso = new Ingrediente();
-    	queso.setNombre("Queso");
-    	queso.setPrecio(2.00);
-    	queso.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Sanguchetto.getInstance().agregarIngrediente(mostaza);
-    	Sanguchetto.getInstance().agregarIngrediente(lechuga);
-    	Sanguchetto.getInstance().agregarIngrediente(queso);
-    	
+
         Sanguchetto.getInstance().vaciar();
         
         Integer ingredientes = Sanguchetto.getInstance().verIngredientes().size();
@@ -40,24 +51,6 @@ public class SanguchettoTest {
 
     @Test
     public void testAgregarIngrediente() {
-    	Ingrediente mostaza = new Ingrediente();
-    	mostaza.setNombre("Mostaza");
-    	mostaza.setPrecio(0.50);
-    	mostaza.setTipo(TipoIngrediente.CONDIMENTO);
-    	
-    	Ingrediente lechuga = new Ingrediente();
-    	lechuga.setNombre("Lechuga");
-    	lechuga.setPrecio(2.50);
-    	lechuga.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Ingrediente queso = new Ingrediente();
-    	queso.setNombre("Queso");
-    	queso.setPrecio(2.00);
-    	queso.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Sanguchetto.getInstance().agregarIngrediente(mostaza);
-    	Sanguchetto.getInstance().agregarIngrediente(lechuga);
-    	Sanguchetto.getInstance().agregarIngrediente(queso);
     	
     	Integer ingredientes = Sanguchetto.getInstance().verIngredientes().size();
     	Integer condimentos = Sanguchetto.getInstance().verCondimentos().size();
@@ -67,72 +60,18 @@ public class SanguchettoTest {
 
     @Test
     public void testVerIngredientes() {
-    	Ingrediente mostaza = new Ingrediente();
-    	mostaza.setNombre("Mostaza");
-    	mostaza.setPrecio(0.50);
-    	mostaza.setTipo(TipoIngrediente.CONDIMENTO);
-    	
-    	Ingrediente lechuga = new Ingrediente();
-    	lechuga.setNombre("Lechuga");
-    	lechuga.setPrecio(2.50);
-    	lechuga.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Ingrediente queso = new Ingrediente();
-    	queso.setNombre("Queso");
-    	queso.setPrecio(2.00);
-    	queso.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Sanguchetto.getInstance().agregarIngrediente(mostaza);
-    	Sanguchetto.getInstance().agregarIngrediente(lechuga);
-    	Sanguchetto.getInstance().agregarIngrediente(queso);
     	
     	Assert.assertTrue(Sanguchetto.getInstance().verIngredientes().size() == 2);
     }
 
     @Test
     public void testVerCondimentos() {
-    	Ingrediente mostaza = new Ingrediente();
-    	mostaza.setNombre("Mostaza");
-    	mostaza.setPrecio(0.50);
-    	mostaza.setTipo(TipoIngrediente.CONDIMENTO);
-    	
-    	Ingrediente lechuga = new Ingrediente();
-    	lechuga.setNombre("Lechuga");
-    	lechuga.setPrecio(2.50);
-    	lechuga.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Ingrediente queso = new Ingrediente();
-    	queso.setNombre("Queso");
-    	queso.setPrecio(2.00);
-    	queso.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Sanguchetto.getInstance().agregarIngrediente(mostaza);
-    	Sanguchetto.getInstance().agregarIngrediente(lechuga);
-    	Sanguchetto.getInstance().agregarIngrediente(queso);
     	
     	Assert.assertTrue(Sanguchetto.getInstance().verCondimentos().size() == 1);
     }
 
     @Test
     public void testGetPrecio() {
-    	Ingrediente mostaza = new Ingrediente();
-    	mostaza.setNombre("Mostaza");
-    	mostaza.setPrecio(0.50);
-    	mostaza.setTipo(TipoIngrediente.CONDIMENTO);
-    	
-    	Ingrediente lechuga = new Ingrediente();
-    	lechuga.setNombre("Lechuga");
-    	lechuga.setPrecio(2.50);
-    	lechuga.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Ingrediente queso = new Ingrediente();
-    	queso.setNombre("Queso");
-    	queso.setPrecio(2.00);
-    	queso.setTipo(TipoIngrediente.INGREDIENTE);
-    	
-    	Sanguchetto.getInstance().agregarIngrediente(mostaza);
-    	Sanguchetto.getInstance().agregarIngrediente(lechuga);
-    	Sanguchetto.getInstance().agregarIngrediente(queso);
     	
     	Assert.assertTrue(Sanguchetto.getInstance().getPrecio() == 5);
     }
