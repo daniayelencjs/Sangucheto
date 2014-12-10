@@ -4,36 +4,37 @@
 <html lang="en">
 	<head>
 	<title></title>
-			<%@include file="/recursos/includes/recursos.html" %>
+		<%@include file="/recursos/includes/recursos.html" %>
 	</head>
 	<body>
 
-		<%@include file="/recursos/includes/navbar.html" %>
-
+	<%@include file="/recursos/includes/navbar.html" %>
+	
+	<div id="wrap">
 		<div class="container">
-      <div class="starter-template">
-      	<h1>Dar de alta ingrediente</h1>
-      	<div class="row">
-          <div class="col-md-12">
-          	<form:form class="form-horizontal" action="darDeAltaIngrediente" commandName="ingrediente" role="form" method="post">
-          		<div class="form-group">
-          			<label for="nombre" class="control-label col-md-4">Nombre</label>
-                <div class="col-md-4">
+    		<div class="starter-template">
+      			<h1>Dar de alta ingrediente</h1>
+      			<div class="row">
+          			<div class="col-md-12">
+          				<form:form class="form-horizontal" action="darDeAltaIngrediente" commandName="ingrediente" role="form" method="post">
+          					<div class="form-group">
+          						<label for="nombre" class="control-label col-md-4">Nombre</label>
+   						        <div class="col-md-4">
 									<form:input class="form-control" id="nombre" path="nombre"/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="precio" class="control-label col-md-4">Precio</label>
-                <div class="col-md-4">
+               					<div class="col-md-4">
 									<form:input class="form-control" id="precio" path="precio"/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="tipo" class="control-label col-md-4">Tipo</label>
-                <div class="col-md-4">
+               					<div class="col-md-4">
 									<form:select class="form-control" id="precio" path="tipo">
-				            <form:options items="${tipos}"/>
-				        	</form:select>
+				          				<form:options items="${tipos}"/>
+				      			  	</form:select>
 								</div>
 							</div>
 							<div class="form-group">
@@ -42,13 +43,17 @@
 						</form:form>
 					</div>
 				</div>
-      </div>
-    </div>
+		    </div>
+	    </div>
+      	<div id="push"></div>
+	</div><!-- /#wrap -->
 
-		<script type="text/javascript">
-      $(document).ready(function() {
-        $("#navbar ul li:contains(Nuevo Ingrediente)").addClass("active");
-      });
+	<%@include file="/recursos/includes/footer.html" %>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#navbar ul li:contains(Nuevo Ingrediente)").addClass("active");
+      	});
     </script>
 
 	</body>

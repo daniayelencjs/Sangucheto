@@ -9,32 +9,37 @@
 	<body>
 		
     <%@include file="/recursos/includes/navbar.html" %>
+    
+    <div id="wrap">
+      <div class="container">
 
-    <div class="container">
+        <div class="starter-template">
+          <h1>Stock de todos los ingredientes</h1>
 
-      <div class="starter-template">
-        <h1>Stock de todos los ingredientes</h1>
+          <div class="table-responsive">
+              <table class="table table-striped">
+  							<thead>
+                  <tr>
+                    <th>Ingrediente</th>
+                    <th>Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                	<c:forEach var="ingrediente" items="${stock}">
+  									<tr>
+  										<td>${ingrediente.key.nombre}</td>
+  										<td>${ingrediente.value}</td>
+  									</tr>
+  								</c:forEach>
+                </tbody>
+  						</table>
+          </div><!-- /.table-responsive -->
+        </div><!-- /.starter-template -->
+      </div><!-- /.container -->
+      <div id="push"></div>
+    </div><!-- /.wrap -->
 
-        <div class="table-responsive">
-            <table class="table table-striped">
-							<thead>
-                <tr>
-                  <th>Ingrediente</th>
-                  <th>Cantidad</th>
-                </tr>
-              </thead>
-              <tbody>
-              	<c:forEach var="ingrediente" items="${stock}">
-									<tr>
-										<td>${ingrediente.key.nombre}</td>
-										<td>${ingrediente.value}</td>
-									</tr>
-								</c:forEach>
-              </tbody>
-						</table>
-        </div><!-- /.table-responsive -->
-      </div><!-- /.starter-template -->
-    </div><!-- /.container -->
+    <%@include file="/recursos/includes/footer.html" %>
 
     <script type="text/javascript">
       $(document).ready(function() {

@@ -8,15 +8,19 @@
 	<body>
 		
     <%@include file="/recursos/includes/navbar.html" %>
+    <div id="wrap">
+      <div class="container">
 
-    <div class="container">
+        <div class="starter-template">
+          <h1>Bienvenido a Sangucheto!</h1>
+          <p class="lead">Arm&aacute; tu sangucheto a tu gusto. Agregale tus condimentos e ingredientes favoritos! :D</p>
+        </div>
 
-      <div class="starter-template">
-        <h1>Bienvenido a Sangucheto!</h1>
-        <p class="lead">Arm&aacute; tu sangucheto a tu gusto. Agregale tus condimentos e ingredientes favoritos! :D</p>
-      </div>
+      </div><!-- /.container -->
+      <div id="push"></div>
+    </div><!-- /#wrap -->
 
-    </div><!-- /.container -->
+    <%@include file="/recursos/includes/footer.html" %>
 
     <script type="text/javascript">
       $(document).ready(function() {
